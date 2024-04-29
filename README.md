@@ -34,4 +34,5 @@ Then, go to galactic_spending_backend directory, you can run:
 
 
 Make sure frontend is running on PORT=3000
+
 Make sure backend is running on PORT=8080
