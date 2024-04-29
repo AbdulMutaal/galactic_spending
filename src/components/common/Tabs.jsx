@@ -114,6 +114,9 @@ export default function BasicTabs() {
             {query.isLoading && <div style={{display: "flex", justifyContent: "center", alignItems: "center", width: "100%"}}>
                 <ColorRing />    
             </div>}
+            {
+              query.isError && <Error>{query.error.message}</Error>
+            }
             {graphData && !query.isLoading && 
                 <GraphOuterContainer>
                     <GraphInnerContainer>
@@ -132,6 +135,9 @@ export default function BasicTabs() {
             {query.isLoading && <div style={{display: "flex", justifyContent: "center", alignItems: "center", width: "100%"}}>
                 <ColorRing />    
             </div>}
+            {
+              query.isError && <Error>{query.error.message}</Error>
+            }
             {lineGraphData && !query.isLoading && 
                 <GraphOuterContainer>
                     <GraphInnerContainer>
@@ -160,4 +166,8 @@ const GraphInnerContainer = styled.div`
 
 const Trend = styled.div`
   margin: 10px 10px 50px 10px;
+`;
+
+const Error = styled.div`
+  color: red;
 `;
