@@ -19,12 +19,12 @@ export default function SpendingLineChart ({ data = lineGraphData2 /* see data t
             yScale={{
                 type: 'linear',
                 min: "auto",
-                max: 10000000000,
+                max: 2000000000,
                 stacked: false,
                 reverse: false
             }}
             yFormat=" >-.2f"
-            curve="step"
+            curve="catmullRom"
             axisTop={null}
             axisRight={null}
             axisBottom={{
