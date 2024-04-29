@@ -70,7 +70,7 @@ async function fetchStarshipCostByFilm(json) {
 
 // req - incoming data
 // res - data we want to send back
-app.get("/tshirt", async (req, res) => {
+app.get("/starshipCost", async (req, res) => {
 
     let response = null;
     
