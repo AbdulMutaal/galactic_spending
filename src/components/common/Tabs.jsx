@@ -45,6 +45,27 @@ function a11yProps(index) {
   };
 }
 
+const GraphDescription = () => {
+  return (
+    <>
+      The following graph illustrates starships cost by each starwars film.<br/>
+
+      <ul>
+        <li>x - starwars film number</li>
+        <li>y - total starships cost</li>
+      </ul>
+    </>
+  )
+}
+
+const TrendDescription = () => {
+  return (
+    <Trend>
+      As we can see that the trend shows that the first 3 starwar films had relatively low cost of starships as compared to the last 3 films. While the 4th film had massively higher starship cost.
+    </Trend>
+  )
+}
+
 export default function BasicTabs() {
     const [value, setValue] = useState(0);
     const [graphData, setGraphData] = useState(null);
@@ -96,7 +117,10 @@ export default function BasicTabs() {
             {graphData && !query.isLoading && 
                 <GraphOuterContainer>
                     <GraphInnerContainer>
+                        <GraphDescription />
                         <BarGraph data={graphData} />
+
+                        <TrendDescription />
                     </GraphInnerContainer>
                 </GraphOuterContainer>
             }
@@ -111,7 +135,10 @@ export default function BasicTabs() {
             {lineGraphData && !query.isLoading && 
                 <GraphOuterContainer>
                     <GraphInnerContainer>
+                        <GraphDescription />
                         <SpendingLineChart data={lineGraphData} />
+
+                        <TrendDescription />
                     </GraphInnerContainer>
                 </GraphOuterContainer>     
             }
@@ -129,4 +156,8 @@ const GraphOuterContainer = styled.div`
 const GraphInnerContainer = styled.div`
     height: 80vh;
     width: 80%;
+`;
+
+const Trend = styled.div`
+  margin: 10px 10px 50px 10px;
 `;
