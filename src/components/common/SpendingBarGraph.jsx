@@ -76,7 +76,7 @@ export default function BarGraph ({ data = barGraphData2 /* see data tab */ }) {
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'Star wars film number',
+                legend: 'Star wars film number (#)',
                 legendPosition: 'middle',
                 legendOffset: 32,
                 truncateTickAt: 0

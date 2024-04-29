@@ -23,7 +23,7 @@ export default function SpendingLineChart ({ data = lineGraphData2 /* see data t
                 stacked: false,
                 reverse: false
             }}
-            yFormat=" >-.2f"
+            yFormat=" >-$0100,.100000~f"
             curve="catmullRom"
             axisTop={null}
             axisRight={null}
@@ -31,7 +31,7 @@ export default function SpendingLineChart ({ data = lineGraphData2 /* see data t
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'Star wars film number',
+                legend: 'Star wars film number (#)',
                 legendOffset: 36,
                 legendPosition: 'middle',
                 truncateTickAt: 0
@@ -40,7 +40,7 @@ export default function SpendingLineChart ({ data = lineGraphData2 /* see data t
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'Starships cost',
+                legend: 'Starships cost ($)',
                 legendOffset: -120,
                 legendPosition: 'middle',
                 truncateTickAt: 0
